@@ -1,0 +1,24 @@
+function calcular() {
+    let comp = parseFloat(document.getElementById("comp").value);
+    let lar = parseFloat(document.getElementById("lar").value);
+    let esp_mm = parseFloat(document.getElementById("esp").value);
+    let quant = parseInt(document.getElementById("quant").value);
+
+    if (isNaN(comp) || isNaN(lar) || isNaN(esp_mm) || isNaN(quant)) {
+        document.getElementById("resultado").innerText = "⚠️ Preencha todos os campos!";
+        return;
+    }
+
+    let esp = esp_mm / 1000;
+
+    let peso = comp * lar * esp * quant * 1.25 * 1000;
+
+    let comp_cm = comp * 100 + 3;
+    let lar_cm = lar * 100 + 3;
+    let esp_cm = esp * 100 + 3;
+
+    let cvol = (comp_cm * lar_cm * esp_cm) / 6000;
+
+    document.getElementById("resultado").innerHTML =
+        `📦 Peso: ${peso.toFixed(2)} g <br> 🚚 Cubado: ${cvol.toFixed(3)} kg`;
+}

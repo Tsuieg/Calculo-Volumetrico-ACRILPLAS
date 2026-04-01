@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Peso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📦 Calculadora de Peso</h1>
+
+    <input id="comp" type="number" step="any" placeholder="Comprimento (m)">
+    <input id="lar" type="number" step="any" placeholder="Largura (m)">
+    <input id="esp" type="number" step="any" placeholder="Espessura (mm)">
+    <input id="quant" type="number" placeholder="Quantidade">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
